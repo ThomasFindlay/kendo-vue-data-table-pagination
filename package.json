@@ -8,6 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@progress/kendo-licensing": "^1.2.2",
+    "@progress/kendo-theme-default": "^5.2.0",
+    "@progress/kendo-vue-data-tools": "^3.1.2",
+    "@progress/kendo-vue-intl": "^3.1.2",
     "vue": "^3.2.25"
   },
   "devDependencies": {
