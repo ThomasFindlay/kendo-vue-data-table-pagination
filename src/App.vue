@@ -28,7 +28,7 @@
         :buttonCount="5"
         type="numeric"
         info
-        pageSizes
+        :pageSizes="[5, 10, 20]"
         previousNext
         @pagechange="onPageChange"
       />
