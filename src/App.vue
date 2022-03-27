@@ -43,6 +43,9 @@ import { Pager } from "@progress/kendo-vue-data-tools";
 const skip = ref(0);
 const take = ref(10);
 const allPosts = ref([]);
+const posts = computed(() =>
+  allPosts.value.slice(skip.value, skip.value + take.value)
+);
 
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then(response => response.json())
@@ -54,10 +57,6 @@ fetch("https://jsonplaceholder.typicode.com/posts")
       };
     });
   });
-
-const posts = computed(() =>
-  allPosts.value.slice(skip.value, skip.value + take.value)
-);
 
 const onPageChange = event => {
   skip.value = event.skip;
